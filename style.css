@@ -1,0 +1,163 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  font-family: 'Poppins',sans-serif;
+  background-image: url('pictures/leaves.jpg') ;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 70, 32, 0.4); 
+  z-index: -1;
+}
+header{
+  padding: 1rem 2rem;
+  background: rgba(0,60,20,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(8px);
+  border-bottom: 2px solid #ffffff20;
+  border-radius: 0 0 20px 20px;
+  /* background-color: #224c22e0; */
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem; 
+}
+.logo-section img{
+  height: 90px;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
+}
+.site-title {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000; 
+}
+.site-title:hover {
+  color: #a5d6a7;
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+.hero-title {
+  margin-top: 0; 
+  font-size: 1.4rem;
+  color: #d2f5d4;
+  font-weight: 400;
+}
+
+.main{
+  padding: 2rem 1rem;
+  flex-grow: 1;
+}
+.intro{
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-size: 1.3rem;
+  color: rgb(241, 236, 236);
+  
+}
+.button-grp{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  gap: 2rem;
+  max-width: 300px;
+}
+
+.btn{
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  border-radius: 12px;
+  text-decoration: none;
+  border: none;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.208);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #004d26;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.13);
+}
+.btn.one {
+  background: rgba(255, 255, 255, 0.85);
+  color: #2e7d32;
+  border: 2px solid #2e7d32;
+}
+
+.btn.one:hover {
+  background-color: #e8f5e9;
+  color: #1b5e20;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.13);
+}
+
+.footer {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 0.9rem;
+  padding: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+}
+.footer:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transition: 0.3s;
+}
+
+@media screen and (max-width:770px){
+  header{
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+@media(max-width:600px){
+  .logo-section{
+    flex-direction: column;
+    text-align: center;
+  }
+  .site-title{
+    margin-left: 0;
+    font-size: 1.7rem;
+  }
+  .button-grp{
+    width: 100%;
+  }
+}
+.intro, .btn{
+  animation: fadeIn 1s  ease-in ;
+}
+@keyframes fadeIn{
+  from{opacity: 0; transform: translateY(20px);}
+  to{opacity: 1; transform: translateY(0);}
+}
+header{
+  animation: slideDown 1s ease-in ;
+}
+@keyframes slideDown{
+  from{opacity: 0; transform: translateY(-20px);}
+  to{opacity: 1; transform: translateY(0);}
+}

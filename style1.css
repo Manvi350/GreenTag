@@ -1,0 +1,110 @@
+body{
+  margin: 0;
+  font-family: 'Poppins',sans-serif;
+  background-image: url('pictures/leaves.jpg') ;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 70, 32, 0.4); 
+  z-index: -1;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.para{
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: rgb(233, 242, 233);
+}
+header{
+  padding: 1rem 2rem;
+  background: rgba(0,60,20,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(8px);
+  border-bottom: 2px solid #ffffff20;
+  border-radius: 0 0 20px 20px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem; 
+}
+.logo-section img{
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
+}
+.site-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000; 
+}
+img{
+    margin-top: 0; 
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+.upload-box {
+    border: 2px dashed rgba(79, 77, 77, 0.689);
+    padding: 30px;
+    margin: 20px 0;
+    cursor: pointer;
+    color: #bcd4c6;
+    text-decoration: none;
+    backdrop-filter: blur(9px);
+    background: #eeececac;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.box{
+    color: #000;;
+}
+#result {
+    display: none;
+    background: #eeececb9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.tag {
+    font-weight: bold;
+    color: #284c38;
+    margin-left: 20px;
+}
+#feedback{
+    font-size: 18px;
+}
+button {
+    background: #2b6930;
+    color: white;
+    font-size: 1.3rem;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+button:hover{
+    background-color:#327f37 ;
+    transform: scale(1.05);
+}
+header{
+  animation: slideDown 1s ease-in ;
+}
+@keyframes slideDown{
+  from{opacity: 0; transform: translateY(-20px);}
+  to{opacity: 1; transform: translateY(0);}
+}

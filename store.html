@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> GreenTag - Store Quiz</title>
+  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+</head>
+<body>
+    <header>
+        <div class="logo-section">
+            <img src="pictures/store1.png" alt="GreenTag logo" >
+        </div>
+        <h1 class="site-title">Store Sustainability Quiz</h1>
+    </header>
+    <p class="hero-title">Answer a few questions to get your GreenTag score!</p>
+    <main class="container">
+        <form id="quizForm">
+            <div class="habit">
+                <input type="checkbox" class="habit-check" id="q1">
+                <label for="q1">Do you use recyclable packaging?</label>
+            </div>
+            <div class="habit">
+                <input type="checkbox" class="habit-check" id="q2">
+                <label for="q2">Are your products locally sourced?</label>
+            </div>
+            <div class="habit">
+                <input type="checkbox" class="habit-check" id="q3">
+                <label for="q3">Do you avoid single-use plastics?</label>
+            </div>
+            <div class="habit">
+                <input type="checkbox" class="habit-check" id="q4">
+                <label for="q4">Do you use renewable energy in operations?</label>
+            </div>
+            <div class="habit">
+                <input type="checkbox" class="habit-check" id="q5">
+                <label for="q5">Do you offer eco-friendly delivery options?</label>
+            </div>
+
+            <button type="button" id="showscore">Get My Score</button>
+
+            <div id="score"></div>
+            <div class="complete-message" id="message">
+                <p> 🎉 Congratulations! You've earned a GreenTag badge!</p>
+                <img src="pictures/Green badge.png" width="80" alt="Green Badge" />
+            </div>
+        </form>
+    </main>
+
+    <script src="script2.js"></script>
+</body>
+</html>
